@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html>
+	</head>
+
+		<title> THE EPIC OF GILGAMESH </title>
+	<link rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+  		<!-- or -->
+  	<link rel="stylesheet"
+  		href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+
+<meta charset="utf-8">
+        <meta content='IE=8' http-equiv='X-UA-Compatible'>
+        <title>Frequcency analysis using HTML5 Audio and Web Audio API</title>
+        <meta name="viewport" content="width=device-width">
+        <!-- Das favicon.ico und das apple-touch-icon.png in das root Verzeichnis -->
+        <link rel="stylesheet" href="css/style.css">
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css' />
+        <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="src/bufferloader.js"></script>
+        <script src="src/id3-minimized.js"></script>
+        <script src="src/audiovisualisierung.js"></script>
+
+
+
+
+
+
+
+
+	<style type="text/css">
+
+ div.content { width: 1200px }
+ 
+
+	* {
+		color: #8E44AD}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+}
+div {
+  width: 400px;
+  height: 200px;
+  margin: 50px auto;
+}
+span {
+  display: inline-block;
+  background-color: green;
+  width: 20px;
+  height: 20px;
+  animation: wave 2s linear infinite;
+}
+.a1 {
+  animation-delay: 0s;
+}
+.a2 {
+  animation-delay: .2s;
+}
+.a3 {
+  animation-delay: .4s;
+}
+.a4 {
+  animation-delay: .6s;
+}
+.a5 {
+  animation-delay: .8s;
+}
+@keyframes wave {
+  0%, 50%, 75%, 100% {
+    height: 5px;
+    transform: translateY(0px);
+  }
+  25% {
+    height: 30px;
+    transform: translateY(15px);
+    background-color: palevioletred;
+  }
+}
+
+
+
+
+
+
+
+	
+        body{
+	
+		background-image: url("123/333.gif");
+   		 background-size: cover;}
+
+
+        h1{
+		position:absolute:
+		height: 35%;
+		width: 35%;
+		margin: 20px auto 20px auto;
+		color: #D98880}
+
+	p{	
+		position:absolute:
+		height: 35%;
+		width: 35%; 
+		margin: 20px auto 20px auto;
+		text-align: left;
+
+
+/* Apply animation to this element */	
+ animation: example1 10s linear;
+}
+/* Move it (define the animation) */
+@keyframes example1 {
+ 0%   { 
+ transform: translateX(200%); 		
+ }
+ 100% { 
+ transform: translateX(0%);
+animation-iteration-count: infinite;
+ }
+}
+
+
+
+
+
+	
+	p1{	
+		position:absolute:
+		height: 35%;
+		width: 35%; 
+		margin: 20px auto 20px auto;
+		text-align: left;}
+
+
+	</style>
+
+    </head>
+
+
+
+	<body>
+
+
+  <div class="content">
+
+
+		<h1 class="animated infinite bounce delay-2s"> Prologue </h1>
+
+		
+<div>
+  ------------------------------------------------------------------------------------------------------------------------------------------------------
+</div>
+
+
+<div>
+  <span class="a1"></span>
+  <span class="a2"></span>
+  <span class="a3"></span>
+  <span class="a4"></span>
+  <span class="a5"></span>
+</div>
+
+
+
+
+
+<input type="file" id="input" onchange="handleFiles(this.files)"/>
+		
+       	<span id="loading"></span>
+        <div id="song_info_wrapper">
+        	<div id="artist">Unknown Artist</div>
+			<div id="title">Unknown Titel</div>
+			<div id="album">Unknown Album</div>
+		</div>
+        <canvas id="freq" width="1024" height="525"></canvas>
+
+
+
+
+
+
+
+		<p>	He who has seen everything, <br />I will make known (?) to the lands.
+			I will teach (?) about him who experienced all things,
+			<br /> <br />... alike,
+			Anu granted him the totality of knowledge of all.
+			</p>
+		<p>	He saw the Secret, discovered the Hidden,
+			<br /><br />he brought information of (the time) before the Flood.
+			</p> 
+		<p>	He went on a distant journey, <br /><br />pushing himself to exhaustion,
+			but then was brought to peace.
+			</p>
+		<p>	He carved on a stone stela all of his toils,<br /><br />
+			and built the wall of Uruk-Haven,
+			the wall of the sacred Eanna Temple, the holy sanctuary.
+			</p>
+		<p>	Look at its wall which gleams like copper(?),<br /><br />
+			inspect its inner wall, the likes of which no one can equal!
+			</p>
+		<p>	Take hold of the threshold stone--it dates from ancient times<br/>
+			Go close to the Eanna Temple, the residence of Ishtar,
+			such as no later king or man ever equaled!
+			</p>
+		<p>	Go up on the wall of Uruk and walk around,<br /><br />
+			examine its foundation, inspect its brickwork thoroughly.<br /><br />
+			Is not (even the core of) the brick structure made of kiln-fired brick,<br />
+			and did not the Seven Sages themselves lay out its plans?
+			</p>
+		<p>	One league city, <br /><br />one league palm gardens,<br /> one league lowlands, the open area(?) of theIshtar Temple,<br />
+			three leagues and the open area(?) of Uruk it (the wall)encloses.<br /><br />
+			</p>
+		<p>	Find the copper tablet box,<br /><br />
+			open the ... of its lock of bronze,<br /><br />undo the fastening of its secret opening.
+			</p>
+		<p>	Take and read out from the lapis lazuli tablet
+			how Gilgamesh went through every hardship.
+			</p> <hr />
+		<p1>	<cite>Translated by Maureen Gallery Kovacs
+			Electronic Edition by Wolf Carnahan, I998
+			</cite></p1>
+
+	
+
+
+  </div>
+
+	</body>
+
+
+
+
+
+
+
+
+
+
+
+</html>
